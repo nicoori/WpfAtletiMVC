@@ -1,0 +1,47 @@
+﻿<Window x:Class="WpfAtletiMVC.Views.DettaglioAtletaView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfAtletiMVC.Views"
+        mc:Ignorable="d"
+        Title="DettaglioAtletaView" Height="270" Width="400">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="3*"/>
+            <ColumnDefinition Width="10"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="10"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="10"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="10"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="10"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="10"/>
+            <RowDefinition Height="30"/>
+        </Grid.RowDefinitions>
+
+        <Label Grid.Row="0" Grid.Column="0">Cognome</Label>
+        <Label Grid.Row="2" Grid.Column="0">Nome</Label>
+        <Label Grid.Row="4" Grid.Column="0">CF</Label>
+        <Label Grid.Row="6" Grid.Column="0">Data Nascita</Label>
+        <Label Grid.Row="8" Grid.Column="0">Disciplina</Label>
+
+        <TextBox Grid.Row="0" Grid.Column="1"/>
+        <TextBox Grid.Row="2" Grid.Column="1"/>
+        <TextBox Grid.Row="4" Grid.Column="1"/>
+        <DatePicker Grid.Row="6" Grid.Column="1"/>
+        <ComboBox Grid.Row="8" Grid.Column="1" ItemsSource="{Binding discipline}" DisplayMemberPath="Nome"/>
+
+        <StackPanel Grid.Row="10" Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Right">
+            <Button Content="Annulla" Width="70"/>
+            <Button Content="Ok" Width="70" Margin="10 0"/>
+        </StackPanel>
+    </Grid>
+</Window>

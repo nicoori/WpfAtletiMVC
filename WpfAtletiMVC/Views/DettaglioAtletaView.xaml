@@ -40,8 +40,8 @@
         <ComboBox Grid.Row="8" Grid.Column="1" ItemsSource="{Binding discipline}" DisplayMemberPath="Nome"/>
 
         <StackPanel Grid.Row="10" Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Right">
-            <Button Content="Annulla" Width="70"/>
-            <Button Content="Ok" Width="70" Margin="10 0"/>
+            <Button x:Name="Annulla" Click="Annulla_Click" Content="Annulla" Width="70"/>
+            <Button x:Name="OK" Click="OK_Click" Content="Ok" Width="70" Margin="10 0"/>
         </StackPanel>
     </Grid>
 </Window>

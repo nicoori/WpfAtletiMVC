@@ -13,6 +13,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using WpfAtletiMVC.Models;
+using System.ComponentModel;
 
 namespace WpfAtletiMVC.Views
 {
@@ -41,6 +42,16 @@ namespace WpfAtletiMVC.Views
             InitializeComponent();
             discipline = new ObservableCollection<Disciplina>(model.getAll());
             this.DataContext = this;
+        }
+
+        private void Annulla_Click(object sender, RoutedEventArgs e)
+        {
+            Close();
+        }
+
+        private void OK_Click(object sender, RoutedEventArgs e)
+        {
+            Close();
         }
     }
 }

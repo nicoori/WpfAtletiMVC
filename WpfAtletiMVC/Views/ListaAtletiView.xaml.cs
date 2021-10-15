@@ -81,7 +81,15 @@ namespace WpfAtletiMVC.Views
 
         private void Elimina_Click(object sender, RoutedEventArgs e)
         {
+            if(atletaSelezionato == null)
+            {
+                MessageBox.Show("Attenzione! Non è stato selezionato alcun Alteta!");
+            }
 
+            else
+            {
+                atleti.Remove(atletaSelezionato);
+            }
         }
     }
 }
